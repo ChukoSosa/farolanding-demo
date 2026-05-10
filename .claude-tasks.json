@@ -154,10 +154,69 @@
         "fix",
         "copy"
       ],
-      "status": "running",
+      "status": "done",
       "createdAt": 1778383174814,
-      "activity": [],
-      "startedAt": 1778383351590
+      "activity": [
+        {
+          "ts": 1778383355982,
+          "kind": "info",
+          "content": "session started · claude-sonnet-4-6"
+        },
+        {
+          "ts": 1778383358858,
+          "kind": "tool_use",
+          "toolName": "Grep",
+          "content": "grep 2021"
+        },
+        {
+          "ts": 1778383359005,
+          "kind": "tool_result",
+          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html:623:    <div class=\"copyright\">© 2021 Faro. Made in Buenos Aires.</div>"
+        },
+        {
+          "ts": 1778383361187,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778383361263,
+          "kind": "tool_result",
+          "content": "<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>"
+        },
+        {
+          "ts": 1778383363482,
+          "kind": "tool_use",
+          "toolName": "Read",
+          "content": "read \\index.html"
+        },
+        {
+          "ts": 1778383363548,
+          "kind": "tool_result",
+          "content": "621\t      </div>"
+        },
+        {
+          "ts": 1778383365626,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778383365694,
+          "kind": "tool_result",
+          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
+        },
+        {
+          "ts": 1778383366986,
+          "kind": "text",
+          "content": "DONE: fix footer copyright year: update 2021 → 2026"
+        }
+      ],
+      "startedAt": 1778383351590,
+      "finishedAt": 1778383371446,
+      "summary": "fix footer copyright year: update 2021 → 2026",
+      "commitSha": "3bbf190",
+      "pushed": true
     },
     {
       "id": 9,
@@ -166,9 +225,10 @@
         "ui",
         "bug"
       ],
-      "status": "pending",
+      "status": "running",
       "createdAt": 1778383232655,
-      "activity": []
+      "activity": [],
+      "startedAt": 1778383371479
     },
     {
       "id": 10,
