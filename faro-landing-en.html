@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faro — Build the habits that matter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf7f0;
+      --bg-elev: #ffffff;
+      --bg-warm: #f3ede0;
+      --text: #1c1c1a;
+      --text-muted: #6b6862;
+      --text-subtle: #a09c93;
+      --accent: #2d5f5d;
+      --accent-h: #1f4a48;
+      --accent-soft: #d8e6e4;
+      --terracotta: #c4794d;
+      --border: #e8e2d4;
+      --shadow-sm: 0 1px 2px rgba(28, 28, 26, 0.04);
+      --shadow-md: 0 4px 16px rgba(28, 28, 26, 0.06);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ============ NAVBAR ============ */
+    nav {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo-mark {
+      color: var(--terracotta);
+      font-size: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+    }
+
+    nav ul a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      /* no :hover state — links don't respond visually on hover */
+    }
+
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--text);
+      color: var(--text);
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, var(--accent-soft) 0%, transparent 65%);
+      opacity: 0.55;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--bg-warm);
+      color: var(--terracotta);
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 32px;
+      letter-spacing: 0.01em;
+      border: 1px solid rgba(196, 121, 77, 0.2);
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(44px, 7vw, 80px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 28px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .hero p.subtitle {
+      font-size: 19px;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 44px;
+      line-height: 1.55;
+    }
+
+    /* Primary CTA — color that doesn't fit the rest of the palette */
+    .cta-primary {
+      background: #ff4500;
+      color: white;
+      border: none;
+      padding: 16px 36px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+      box-shadow: 0 4px 14px rgba(255, 69, 0, 0.28);
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(255, 69, 0, 0.38);
+    }
+
+    /* ============ HERO MOCK ============ */
+    .hero-mock {
+      margin-top: 80px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      box-shadow: var(--shadow-md);
+      text-align: left;
+    }
+
+    .mock-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+    }
+
+    .mock-title {
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .mock-date {
+      font-size: 13px;
+      color: var(--text-subtle);
+    }
+
+    .habit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .habit-row:last-child {
+      border-bottom: none;
+    }
+
+    .habit-name {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .habit-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-warm);
+      font-size: 16px;
+    }
+
+    .habit-streak {
+      display: flex;
+      gap: 5px;
+    }
+
+    .habit-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 3px;
+      background: var(--border);
+    }
+
+    .habit-dot.done {
+      background: var(--accent);
+    }
+
+    /* ============ FEATURES ============ */
+    .features {
+      padding: 110px 0;
+      background: var(--bg-warm);
+    }
+
+    .features h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 16px;
+      line-height: 1.1;
+    }
+
+    .features h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .features-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 18px;
+      margin-bottom: 64px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Cards: align-items: start makes each card take its natural height instead of stretching */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 32px;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    .card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ============ FINAL CTA ============ */
+    .cta-section {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(40px, 6vw, 60px);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.05;
+    }
+
+    .cta-section h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .cta-section p {
+      color: var(--text-muted);
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--text);
+      color: #d6d3cc;
+      padding: 80px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+
+    .footer-brand {
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: white;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-brand-mark {
+      color: var(--terracotta);
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      color: #8d8a83;
+      max-width: 280px;
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      color: #8d8a83;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 150ms ease;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #2a2a28;
+      padding-top: 28px;
+      font-size: 13px;
+      color: #6b6862;
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .cards { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 60px 0 50px; }
+      .features { padding: 70px 0; }
+      .cta-section { padding: 80px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav>
+  <div class="container">
+    <div class="logo"><span class="logo-mark">✦</span> Faro</div>
+    <ul>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+    <button class="nav-cta">Try free →</button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Available on iOS and Android</div>
+    <h1>Turn your <em>intentioons</em> into habits that last.</h1>
+    <p class="subtitle">Faro is a habit tracker that respects your time. No empty metrics, no overwhelming dashboards, no toxic gamification. Just what matters.</p>
+    <button class="cta-primary">Get started</button>
+
+    <div class="hero-mock">
+      <div class="mock-header">
+        <div class="mock-title">My week</div>
+        <div class="mock-date">May 9 · week 19</div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-name">
+          <div class="habit-icon">☼</div>
+          <span>Walk for 30 minutes</span>
+        </div>
+        <div class="habit-streak">
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+        </div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-name">
+          <div class="habit-icon">◷</div>
+          <span>Read 15 pages</span>
+        </div>
+        <div class="habit-streak">
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot"></div>
+        </div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-name">
+          <div class="habit-icon">✎</div>
+          <span>Journal entry</span>
+        </div>
+        <div class="habit-streak">
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot"></div>
+          <div class="habit-dot done"></div>
+        </div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-name">
+          <div class="habit-icon">≋</div>
+          <span>Morning meditation</span>
+        </div>
+        <div class="habit-streak">
+          <div class="habit-dot done"></div>
+          <div class="habit-dot"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot"></div>
+          <div class="habit-dot done"></div>
+          <div class="habit-dot done"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="features" id="features">
+  <div class="container">
+    <h2>Build habits without <em>burning out</em>.</h2>
+    <p class="features-subtitle">Designed to support you, not pressure you. Three principles guiding every decision.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">⊙</div>
+        <h3>Simple by design</h3>
+        <p>No empty metrics or endless dashboards. Just what you need to build the habit.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">◇</div>
+        <h3>Your pace, your rules</h3>
+        <p>Set flexible frequencies, adjust goals anytime, and pause without guilt when you need to. Faro understands that life isn't linear and that habits are built in sprints, not in a perfectly straight line. Adapt without friction.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">△</div>
+        <h3>Private by default</h3>
+        <p>Your data never leaves your device. No tracking, no ads, no sharing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Start today. <em>No credit card.</em></h2>
+    <p>14 days free. Then decide if Faro is for you.</p>
+    <button class="cta-primary">Create my account</button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="footer-brand-mark">✦</span> Faro</div>
+        <div class="footer-tagline">Build the habits that matter, without the app burning you out before the habit does.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Faro</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2021 Faro. Made in Buenos Aires.</div>
+  </div>
+</footer>
+
+</body>
+</html>
