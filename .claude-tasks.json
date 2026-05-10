@@ -1,178 +1,62 @@
 {
   "tasks": [
     {
-      "id": 2,
-      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] \"Get started\" / \"Create my account\" buttons need to be color \"var(--accent)\"",
+      "id": 6,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] There is a typo in the headline. It says \"intentioons\" and should be \"intentions\"",
       "tags": [
-        "bug",
-        "ui"
-      ],
-      "status": "running",
-      "createdAt": 1778375926715,
-      "activity": [
-        {
-          "ts": 1778376744248,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778376851229,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778376859623,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778376893698,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778377142490,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778377169042,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        }
-      ],
-      "revertInProgress": false
-    },
-    {
-      "id": 3,
-      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Footer copyright change \"2021\" with \"2026\"",
-      "tags": [
+        "copy",
+        "fix",
         "bug"
       ],
       "status": "running",
-      "createdAt": 1778375981603,
-      "activity": [
-        {
-          "ts": 1778376865535,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778377146918,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        }
-      ],
-      "revertInProgress": false
+      "createdAt": 1778383070333,
+      "activity": [],
+      "startedAt": 1778383307080
     },
     {
-      "id": 4,
-      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Features section, the 3 card | The middle card has more text and breaks alignment. Make all 3 card the same height",
+      "id": 7,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] The primary CTA button \"Get Started\" / \"Create my Account\" uses a bright orange that doesn't match the rest of the palette. Chane it to a teal that's consisten with the --accent variable",
       "tags": [
+        "ui",
         "bug"
       ],
-      "status": "running",
-      "createdAt": 1778376041845,
-      "activity": [
-        {
-          "ts": 1778376874558,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        }
-      ],
-      "startedAt": 1778376221950,
-      "revertInProgress": false
+      "status": "pending",
+      "createdAt": 1778383137175,
+      "activity": []
     },
     {
-      "id": 5,
-      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Navbar, links | Product, Features, Pricing and Blog have no hover state",
+      "id": 8,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] The copyright year in the footer says 2021. Update it to 2026",
       "tags": [
-        "ui"
+        "fix",
+        "copy"
       ],
-      "status": "done",
-      "createdAt": 1778376087997,
-      "activity": [
-        {
-          "ts": 1778376256305,
-          "kind": "info",
-          "content": "session started · claude-sonnet-4-6"
-        },
-        {
-          "ts": 1778376259034,
-          "kind": "text",
-          "content": "Let me find the navbar CSS in the HTML file."
-        },
-        {
-          "ts": 1778376259881,
-          "kind": "tool_use",
-          "toolName": "Grep",
-          "content": "grep nav|navbar|\\.nav"
-        },
-        {
-          "ts": 1778376260247,
-          "kind": "tool_result",
-          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html-45-    }"
-        },
-        {
-          "ts": 1778376263233,
-          "kind": "text",
-          "content": "I can see the issue at line 89. The comment says \"no :hover state\" and there's no hover rule for `nav ul a`. I'll add one now."
-        },
-        {
-          "ts": 1778376264690,
-          "kind": "tool_use",
-          "toolName": "Edit",
-          "content": "edit \\index.html"
-        },
-        {
-          "ts": 1778376264749,
-          "kind": "tool_result",
-          "content": "<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>"
-        },
-        {
-          "ts": 1778376266845,
-          "kind": "tool_use",
-          "toolName": "Read",
-          "content": "read \\index.html"
-        },
-        {
-          "ts": 1778376266908,
-          "kind": "tool_result",
-          "content": "84\t    nav ul a {"
-        },
-        {
-          "ts": 1778376269300,
-          "kind": "tool_use",
-          "toolName": "Edit",
-          "content": "edit \\index.html"
-        },
-        {
-          "ts": 1778376269353,
-          "kind": "tool_result",
-          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
-        },
-        {
-          "ts": 1778376271912,
-          "kind": "text",
-          "content": "Added `color: var(--accent)` hover state with a 150ms transition to `nav ul a`."
-        },
-        {
-          "ts": 1778376271915,
-          "kind": "text",
-          "content": "DONE: Add hover state to navbar links: color transition to var(--accent)"
-        },
-        {
-          "ts": 1778376870145,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        }
+      "status": "pending",
+      "createdAt": 1778383174814,
+      "activity": []
+    },
+    {
+      "id": 9,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] The 3 cards in the \"Build habits without burning out\" section have different heights because the middle card has more text. Make all 3 cards the same height regardless of content leght",
+      "tags": [
+        "ui",
+        "bug"
       ],
-      "finishedAt": 1778376275814,
-      "summary": "Add hover state to navbar links: color transition to var(--accent)",
-      "commitSha": "58bc995",
-      "pushed": true,
-      "revertInProgress": false
+      "status": "pending",
+      "createdAt": 1778383232655,
+      "activity": []
+    },
+    {
+      "id": 10,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] The navbar links (product, Feature, Pricing, blog) have no hover state. Add a smooth color transkition on hover, using the teal --accent color as the destination",
+      "tags": [
+        "ux",
+        "bug"
+      ],
+      "status": "pending",
+      "createdAt": 1778383292830,
+      "activity": []
     }
   ],
-  "nextId": 6
+  "nextId": 11
 }
