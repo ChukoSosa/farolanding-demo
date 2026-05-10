@@ -1,95 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Hero - <h1> the word \"intentioons\" -> \"intentions\"",
-      "tags": [
-        "bug"
-      ],
-      "status": "done",
-      "createdAt": 1778375852868,
-      "activity": [
-        {
-          "ts": 1778376099408,
-          "kind": "info",
-          "content": "session started · claude-sonnet-4-6"
-        },
-        {
-          "ts": 1778376103006,
-          "kind": "text",
-          "content": "Let me find and fix the typo in the HTML file."
-        },
-        {
-          "ts": 1778376103240,
-          "kind": "tool_use",
-          "toolName": "Grep",
-          "content": "grep intentioons"
-        },
-        {
-          "ts": 1778376103370,
-          "kind": "tool_result",
-          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\.claude-tasks.json:5:      \"prompt\": \"[Página: http://localhost:3000/] [Viewport: 1396x663] Hero - <h1> the word \\\"intentioons\\\" -> "
-        },
-        {
-          "ts": 1778376106623,
-          "kind": "tool_use",
-          "toolName": "Edit",
-          "content": "edit \\index.html"
-        },
-        {
-          "ts": 1778376106703,
-          "kind": "tool_result",
-          "content": "<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>"
-        },
-        {
-          "ts": 1778376109633,
-          "kind": "tool_use",
-          "toolName": "Read",
-          "content": "read \\index.html"
-        },
-        {
-          "ts": 1778376109751,
-          "kind": "tool_result",
-          "content": "479\t  <div class=\"container\">"
-        },
-        {
-          "ts": 1778376112621,
-          "kind": "tool_use",
-          "toolName": "Edit",
-          "content": "edit \\index.html"
-        },
-        {
-          "ts": 1778376112673,
-          "kind": "tool_result",
-          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
-        },
-        {
-          "ts": 1778376116207,
-          "kind": "text",
-          "content": "DONE: Fix typo in hero h1: \"intentioons\" → \"intentions\""
-        },
-        {
-          "ts": 1778376378230,
-          "kind": "info",
-          "content": "↩ Revirtiendo…"
-        },
-        {
-          "ts": 1778376378570,
-          "kind": "info",
-          "content": "⟳ Conflicto con commits posteriores — Claude deshaciendo manualmente…"
-        }
-      ],
-      "startedAt": 1778376096527,
-      "finishedAt": 1778376138577,
-      "summary": "Fix typo in hero h1: \"intentioons\" → \"intentions\"",
-      "commitSha": "348a573",
-      "pushed": true,
-      "revertInProgress": false,
-      "reverted": true,
-      "revertSha": "2e691af",
-      "revertMethod": "claude"
-    },
-    {
       "id": 2,
       "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] \"Get started\" / \"Create my account\" buttons need to be color \"var(--accent)\"",
       "tags": [
@@ -167,13 +78,44 @@
           "ts": 1778376160894,
           "kind": "text",
           "content": "DONE: Fix CTA buttons color from #ff4500 to var(--accent)"
+        },
+        {
+          "ts": 1778376744248,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
+        },
+        {
+          "ts": 1778376851229,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
+        },
+        {
+          "ts": 1778376859623,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
+        },
+        {
+          "ts": 1778376893698,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
+        },
+        {
+          "ts": 1778377142490,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
+        },
+        {
+          "ts": 1778377169042,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
         }
       ],
       "startedAt": 1778376138600,
       "finishedAt": 1778376196296,
       "summary": "Fix CTA buttons color from #ff4500 to var(--accent)",
       "commitSha": "856f44c",
-      "pushed": true
+      "pushed": true,
+      "revertInProgress": false
     },
     {
       "id": 3,
@@ -237,13 +179,24 @@
           "ts": 1778376212222,
           "kind": "text",
           "content": "DONE: Fix footer copyright year from 2021 to 2026"
+        },
+        {
+          "ts": 1778376865535,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
+        },
+        {
+          "ts": 1778377146918,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
         }
       ],
       "startedAt": 1778376196316,
       "finishedAt": 1778376221940,
       "summary": "Fix footer copyright year from 2021 to 2026",
       "commitSha": "39ce1d6",
-      "pushed": true
+      "pushed": true,
+      "revertInProgress": false
     },
     {
       "id": 4,
@@ -322,13 +275,19 @@
           "ts": 1778376249626,
           "kind": "text",
           "content": "DONE: Fix features cards alignment: change align-items from start to stretch for equal card heights"
+        },
+        {
+          "ts": 1778376874558,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
         }
       ],
       "startedAt": 1778376221950,
       "finishedAt": 1778376253342,
       "summary": "Fix features cards alignment: change align-items from start to stretch for equal card heights",
       "commitSha": "5e0dd7b",
-      "pushed": true
+      "pushed": true,
+      "revertInProgress": false
     },
     {
       "id": 5,
@@ -407,13 +366,19 @@
           "ts": 1778376271915,
           "kind": "text",
           "content": "DONE: Add hover state to navbar links: color transition to var(--accent)"
+        },
+        {
+          "ts": 1778376870145,
+          "kind": "info",
+          "content": "↩ Revirtiendo…"
         }
       ],
       "startedAt": 1778376253363,
       "finishedAt": 1778376275814,
       "summary": "Add hover state to navbar links: color transition to var(--accent)",
       "commitSha": "58bc995",
-      "pushed": true
+      "pushed": true,
+      "revertInProgress": false
     }
   ],
   "nextId": 6
