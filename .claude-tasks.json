@@ -79,10 +79,73 @@
         "ui",
         "bug"
       ],
-      "status": "running",
+      "status": "done",
       "createdAt": 1778383137175,
-      "activity": [],
-      "startedAt": 1778383327524
+      "activity": [
+        {
+          "ts": 1778383331557,
+          "kind": "info",
+          "content": "session started · claude-sonnet-4-6"
+        },
+        {
+          "ts": 1778383334258,
+          "kind": "text",
+          "content": "Let me find the CTA button styles in the HTML file."
+        },
+        {
+          "ts": 1778383334885,
+          "kind": "tool_use",
+          "toolName": "Grep",
+          "content": "grep #ff4500|btn|cta|Get Started|Create my"
+        },
+        {
+          "ts": 1778383335135,
+          "kind": "tool_result",
+          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html-90-    }"
+        },
+        {
+          "ts": 1778383338636,
+          "kind": "text",
+          "content": "I can see the issue. The `.cta-primary` class uses `#ff4500` (orange) for background and has an orange-tinted box-shadow on hover. I'll update both to use `var(--accent)` and `var(--accent-h)`."
+        },
+        {
+          "ts": 1778383338925,
+          "kind": "tool_use",
+          "toolName": "Read",
+          "content": "read \\index.html"
+        },
+        {
+          "ts": 1778383338984,
+          "kind": "tool_result",
+          "content": "175\t"
+        },
+        {
+          "ts": 1778383344038,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778383344118,
+          "kind": "tool_result",
+          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
+        },
+        {
+          "ts": 1778383346854,
+          "kind": "text",
+          "content": "Updated `.cta-primary` background from `#ff4500` to `var(--accent)` and replaced the orange-tinted box-shadows with teal-tinted equivalents matching `--accent: #2d5f5d`."
+        },
+        {
+          "ts": 1778383346864,
+          "kind": "text",
+          "content": "DONE: fix CTA button color: replace orange #ff4500 with var(--accent) teal on .cta-primary"
+        }
+      ],
+      "startedAt": 1778383327524,
+      "finishedAt": 1778383351578,
+      "summary": "fix CTA button color: replace orange #ff4500 with var(--accent) teal on .cta-primary",
+      "commitSha": "640e197",
+      "pushed": true
     },
     {
       "id": 8,
@@ -91,9 +154,10 @@
         "fix",
         "copy"
       ],
-      "status": "pending",
+      "status": "running",
       "createdAt": 1778383174814,
-      "activity": []
+      "activity": [],
+      "startedAt": 1778383351590
     },
     {
       "id": 9,
