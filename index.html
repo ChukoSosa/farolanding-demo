@@ -86,7 +86,11 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 500;
-      /* no :hover state — links don't respond visually on hover */
+      transition: color 200ms ease;
+    }
+
+    nav ul a:hover {
+      color: var(--accent);
     }
 
     .nav-cta {
