@@ -167,10 +167,69 @@
       "tags": [
         "bug"
       ],
-      "status": "running",
+      "status": "done",
       "createdAt": 1778375981603,
-      "activity": [],
-      "startedAt": 1778376196316
+      "activity": [
+        {
+          "ts": 1778376200725,
+          "kind": "info",
+          "content": "session started · claude-sonnet-4-6"
+        },
+        {
+          "ts": 1778376203962,
+          "kind": "tool_use",
+          "toolName": "Grep",
+          "content": "grep 2021 in "
+        },
+        {
+          "ts": 1778376203977,
+          "kind": "tool_result",
+          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\demo-recording-guide-en.md:45:| 3 | Footer copyright | \"© 2021\" → \"© 2026\" |"
+        },
+        {
+          "ts": 1778376206258,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778376206313,
+          "kind": "tool_result",
+          "content": "<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>"
+        },
+        {
+          "ts": 1778376208145,
+          "kind": "tool_use",
+          "toolName": "Read",
+          "content": "read \\index.html"
+        },
+        {
+          "ts": 1778376208202,
+          "kind": "tool_result",
+          "content": "620\t        </ul>"
+        },
+        {
+          "ts": 1778376210260,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778376210350,
+          "kind": "tool_result",
+          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
+        },
+        {
+          "ts": 1778376212222,
+          "kind": "text",
+          "content": "DONE: Fix footer copyright year from 2021 to 2026"
+        }
+      ],
+      "startedAt": 1778376196316,
+      "finishedAt": 1778376221940,
+      "summary": "Fix footer copyright year from 2021 to 2026",
+      "commitSha": "39ce1d6",
+      "pushed": true
     },
     {
       "id": 4,
@@ -178,9 +237,10 @@
       "tags": [
         "bug"
       ],
-      "status": "pending",
+      "status": "running",
       "createdAt": 1778376041845,
-      "activity": []
+      "activity": [],
+      "startedAt": 1778376221950
     },
     {
       "id": 5,

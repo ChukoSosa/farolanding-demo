@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git -C \"C:\\\\Users\\\\ncasa\\\\Documents\\\\MC-Studioai\\\\MC-Taski\\\\demo\\\\farolanding-demo\" config user.name \"chukoSosa\")",
-      "Bash(git -C \"C:\\\\Users\\\\ncasa\\\\Documents\\\\MC-Studioai\\\\MC-Taski\\\\demo\\\\farolanding-demo\" config user.email \"ncasanova@live.com\")"
+      "Bash(git -C \"C:\\\\Users\\\\ncasa\\\\Documents\\\\MC-Studioai\\\\MC-Taski\\\\demo\\\\farolanding-demo\" config user.email \"ncasanova@live.com\")",
+      "Bash(git *)"
     ]
   }
 }
