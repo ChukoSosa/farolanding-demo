@@ -1,0 +1,57 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Hero - <h1> the word \"intentioons\" -> \"intentions\"",
+      "tags": [
+        "bug"
+      ],
+      "status": "running",
+      "createdAt": 1778375852868,
+      "activity": [],
+      "startedAt": 1778376096527
+    },
+    {
+      "id": 2,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] \"Get started\" / \"Create my account\" buttons need to be color \"var(--accent)\"",
+      "tags": [
+        "bug",
+        "ui"
+      ],
+      "status": "pending",
+      "createdAt": 1778375926715,
+      "activity": []
+    },
+    {
+      "id": 3,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Footer copyright change \"2021\" with \"2026\"",
+      "tags": [
+        "bug"
+      ],
+      "status": "pending",
+      "createdAt": 1778375981603,
+      "activity": []
+    },
+    {
+      "id": 4,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Features section, the 3 card | The middle card has more text and breaks alignment. Make all 3 card the same height",
+      "tags": [
+        "bug"
+      ],
+      "status": "pending",
+      "createdAt": 1778376041845,
+      "activity": []
+    },
+    {
+      "id": 5,
+      "prompt": "[Página: http://localhost:3000/] [Viewport: 1396x663] Navbar, links | Product, Features, Pricing and Blog have no hover state",
+      "tags": [
+        "ui"
+      ],
+      "status": "pending",
+      "createdAt": 1778376087997,
+      "activity": []
+    }
+  ],
+  "nextId": 6
+}
