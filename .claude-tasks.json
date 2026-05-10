@@ -225,95 +225,10 @@
         "ui",
         "bug"
       ],
-      "status": "done",
+      "status": "running",
       "createdAt": 1778383232655,
-      "activity": [
-        {
-          "ts": 1778383375365,
-          "kind": "info",
-          "content": "session started · claude-sonnet-4-6"
-        },
-        {
-          "ts": 1778383379944,
-          "kind": "text",
-          "content": "Let me find the relevant CSS for the feature cards section."
-        },
-        {
-          "ts": 1778383381089,
-          "kind": "tool_use",
-          "toolName": "Grep",
-          "content": "grep features|card|habit|burning"
-        },
-        {
-          "ts": 1778383381257,
-          "kind": "tool_result",
-          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html-3-<head>"
-        },
-        {
-          "ts": 1778383385021,
-          "kind": "tool_use",
-          "toolName": "Grep",
-          "content": "grep features-grid|feature-card"
-        },
-        {
-          "ts": 1778383385030,
-          "kind": "tool_result",
-          "content": "No matches found"
-        },
-        {
-          "ts": 1778383387448,
-          "kind": "tool_use",
-          "toolName": "Grep",
-          "content": "grep \\.features"
-        },
-        {
-          "ts": 1778383387593,
-          "kind": "tool_result",
-          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html-273-    .habit-dot.done {"
-        },
-        {
-          "ts": 1778383390542,
-          "kind": "tool_use",
-          "toolName": "Read",
-          "content": "read \\index.html"
-        },
-        {
-          "ts": 1778383390637,
-          "kind": "tool_result",
-          "content": "305\t      margin-left: auto;"
-        },
-        {
-          "ts": 1778383393938,
-          "kind": "text",
-          "content": "The fix is clear: `.cards` has `align-items: start` which prevents cards from stretching to equal height. Removing it (or changing to `align-items: stretch`) will make all cards equal height."
-        },
-        {
-          "ts": 1778383395447,
-          "kind": "tool_use",
-          "toolName": "Edit",
-          "content": "edit \\index.html"
-        },
-        {
-          "ts": 1778383395760,
-          "kind": "tool_result",
-          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
-        },
-        {
-          "ts": 1778383399434,
-          "kind": "text",
-          "content": "Changed `align-items: start` to `align-items: stretch` on `.cards`. Grid's default stretch behavior now makes all three cards the same height regardless of content length."
-        },
-        {
-          "ts": 1778383399460,
-          "kind": "text",
-          "content": "DONE: fix features cards height: change align-items from start to stretch so all 3 cards match the tallest one"
-        }
-      ],
-      "startedAt": 1778383371479,
-      "finishedAt": 1778383403897,
-      "summary": "fix features cards height: change align-items from start to stretch so all 3 cards match the tallest one",
-      "commitSha": "c52eb28",
-      "pushed": true
+      "activity": [],
+      "startedAt": 1778383371479
     },
     {
       "id": 10,
@@ -322,10 +237,9 @@
         "ux",
         "bug"
       ],
-      "status": "running",
+      "status": "pending",
       "createdAt": 1778383292830,
-      "activity": [],
-      "startedAt": 1778383403922
+      "activity": []
     }
   ],
   "nextId": 11
