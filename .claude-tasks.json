@@ -110,7 +110,6 @@
           "content": "↩ Revirtiendo…"
         }
       ],
-      "startedAt": 1778376138600,
       "finishedAt": 1778376196296,
       "summary": "Fix CTA buttons color from #ff4500 to var(--accent)",
       "commitSha": "856f44c",
