@@ -6,10 +6,74 @@
       "tags": [
         "bug"
       ],
-      "status": "running",
+      "status": "done",
       "createdAt": 1778375852868,
-      "activity": [],
-      "startedAt": 1778376096527
+      "activity": [
+        {
+          "ts": 1778376099408,
+          "kind": "info",
+          "content": "session started · claude-sonnet-4-6"
+        },
+        {
+          "ts": 1778376103006,
+          "kind": "text",
+          "content": "Let me find and fix the typo in the HTML file."
+        },
+        {
+          "ts": 1778376103240,
+          "kind": "tool_use",
+          "toolName": "Grep",
+          "content": "grep intentioons"
+        },
+        {
+          "ts": 1778376103370,
+          "kind": "tool_result",
+          "content": "C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\.claude-tasks.json:5:      \"prompt\": \"[Página: http://localhost:3000/] [Viewport: 1396x663] Hero - <h1> the word \\\"intentioons\\\" -> "
+        },
+        {
+          "ts": 1778376106623,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778376106703,
+          "kind": "tool_result",
+          "content": "<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>"
+        },
+        {
+          "ts": 1778376109633,
+          "kind": "tool_use",
+          "toolName": "Read",
+          "content": "read \\index.html"
+        },
+        {
+          "ts": 1778376109751,
+          "kind": "tool_result",
+          "content": "479\t  <div class=\"container\">"
+        },
+        {
+          "ts": 1778376112621,
+          "kind": "tool_use",
+          "toolName": "Edit",
+          "content": "edit \\index.html"
+        },
+        {
+          "ts": 1778376112673,
+          "kind": "tool_result",
+          "content": "The file C:\\Users\\ncasa\\Documents\\MC-Studioai\\MC-Taski\\demo\\farolanding-demo\\index.html has been updated successfully. (file state is current in your context — no need to Read it back)"
+        },
+        {
+          "ts": 1778376116207,
+          "kind": "text",
+          "content": "DONE: Fix typo in hero h1: \"intentioons\" → \"intentions\""
+        }
+      ],
+      "startedAt": 1778376096527,
+      "finishedAt": 1778376138577,
+      "summary": "Fix typo in hero h1: \"intentioons\" → \"intentions\"",
+      "commitSha": "348a573",
+      "pushed": true
     },
     {
       "id": 2,
@@ -18,9 +82,10 @@
         "bug",
         "ui"
       ],
-      "status": "pending",
+      "status": "running",
       "createdAt": 1778375926715,
-      "activity": []
+      "activity": [],
+      "startedAt": 1778376138600
     },
     {
       "id": 3,
