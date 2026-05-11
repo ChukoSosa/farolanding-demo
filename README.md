@@ -1,1 +1,3 @@
 # farolanding-demo
+
+npx serve
